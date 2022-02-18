@@ -81,6 +81,7 @@ nav a:hover{
   text-decoration-style: wavy;
 }
 
+
 a.skip{
   background: white;
   padding: 6px;
@@ -92,13 +93,10 @@ a.skip{
   left: -500px;
 }
 
-a.skip:focus{
-  left: 10px;
-}
 
 /* Requirement 4 code here*/
 nav a:focus{
-  border-top: solid 2px yellow;
+  border-top: solid 2px #FFFF00;
 }
 
 .container{
@@ -109,9 +107,10 @@ nav a:focus{
 }
 
 /* Requirements 6-10 here: */
+
 .intro{
   /* The image used */
-  background-color: #DDDDDD;
+  background-color: #707070;
   background-image: url(../images/header.jpg);
 
   /* Set a specific height */
@@ -155,14 +154,15 @@ img{
 }
 
 .text{
+  align-self: center;
   max-height: 25vh;
-  align-items: center;
   overflow: scroll;
 }
 
 @media screen and (min-width: 700px){
   nav{
     padding-top: 35px;
+    /*Requirement 11*/
     text-align: right;
   }
 
@@ -171,15 +171,14 @@ img{
     margin-right:0;
   }
 
-  
   /* Requirements 12-15 here: */
-  nav a.skip{
+  a.skip:focus{
     bottom: 20px;
   }
 
   .container{
-    grid-template-columns: 50px, auto, 500px, auto, 50px;
-    grid-template-rows: 300px, 300px, 300px, 300px;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: repeat(4, 300px);
   }
 
   .about, .method, .clients-image, .contact-image{
